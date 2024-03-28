@@ -1,1 +1,20 @@
-<div class="timeline">Time</div>
+<div class="time-voyage">
+  <mat-form-field class="search">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search term" [(ngModel)]="searchTerm" />
+  </mat-form-field>
+  <div class="timeline">
+    @for (item of historicData | search:searchTerm; track i; let i=$index) {
+    <div class="card">
+      <div class="dotted-line">
+        <div class="line" [ngClass]="{'line-hidden': i===0}"></div>
+        <div class="dot">
+          <div class="dot-date">{{item.date}}</div>
+        </div>
+        <div class="line" [ngClass]="{'line-hidden': i===(historicData | search:searchTerm).length-1}"></div>
+      </div>
+      <app-event-card [event]="item"></app-event-card>
+    </div>
+    }
+  </div>
+</div>

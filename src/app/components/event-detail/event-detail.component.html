@@ -1,1 +1,21 @@
-<p>event-detail works!</p>
+<div class="details">
+  <div class="title">
+    <h2>{{ data.title }}</h2>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="close"
+      [mat-dialog-close]="data"
+    ></mat-icon>
+  </div>
+  <h2>{{ data.date }}</h2>
+  <div class="description">
+    <div>{{ data.description }}</div>
+    <div>
+      <img [ngSrc]="data.image" [alt]="data.title" width="560" height="315" />
+    </div>
+    @if (videoURL) {
+      <iframe width="560" height="315" [src]="videoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    }
+  </div>
+</div>

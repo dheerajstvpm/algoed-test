@@ -1,1 +1,6 @@
-<p>event-card works!</p>
+<mat-card class="card" (click)="openDialog()">
+  <mat-card-header>
+    <mat-card-title>{{ event().title }}</mat-card-title>
+  </mat-card-header>
+  <img [ngSrc]="event().image" [alt]="event().title" width="300" height="200" priority/>
+</mat-card>

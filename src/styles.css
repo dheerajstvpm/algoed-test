@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-dialog > .mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: white !important;
+  max-width: 620px;
+  max-height: 620px;
+}

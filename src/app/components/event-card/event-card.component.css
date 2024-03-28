@@ -1,0 +1,26 @@
+.card {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  background: white;
+  border: 1px solid;
+  transform: rotate(90deg) translateX(300px);
+  transform-origin: right top;
+}
+
+.card:hover {
+  transform: rotate(90deg) translateX(320px) scale(1.15);
+  transition: transform 0.5s;
+  z-index: 1;
+}
+
+mat-card-subtitle {
+  color: black !important;
+}
+
+img {
+  border-top: 1px solid;
+}
